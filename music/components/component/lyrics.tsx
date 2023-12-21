@@ -9,7 +9,7 @@ import scrapeLyrics from './scrapeLyrics';
 
 const cleanLyrics = (rawLyrics) => {
   // Split the lyrics at "Songwriters"
-  const [cleanedLyrics] = rawLyrics.split('Songwriters');
+  const [cleanedLyrics] = rawLyrics.split(/Songwriters|See translation/);
 
   return cleanedLyrics.trim();
 };

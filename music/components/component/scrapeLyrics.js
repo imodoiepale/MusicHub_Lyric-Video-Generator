@@ -35,10 +35,6 @@ const scrapeLyrics = async (song, artist) => {
       // Return the text content with preserved line breaks
       return tempDiv.textContent || tempDiv.innerText;
     });
-
-    // Log lyrics (with line breaks) before returning
-    console.log(lyrics);
-
     return lyrics;
   } finally {
     await browser.close();
